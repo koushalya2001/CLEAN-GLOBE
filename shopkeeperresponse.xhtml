@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f = "http://java.sun.com/jsf/core">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body style='background-color:powderblue;'>
+          <h:dataTable binding="#{table}" value="#{shopkeeperdb.usersList()}" var="u" 
+   styleClass = "guestbookTable"
+   headerClass = "guestbookTableHeader"
+   rowClasses = "guestbookTableOddRow,guestbookTableEvenRow" border="1">
+     <h:column>    				
+      <f:facet name = "header">ID</f:facet>    				
+      #{u.id}
+   </h:column>
+   <h:column>    				
+      <f:facet name = "header">Name</f:facet>    				
+      #{u.name}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">Email</f:facet>
+      #{u.email}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">MESSAGE</f:facet>
+      #{u.message}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">DATE</f:facet>
+      #{u.date}
+   </h:column>
+               <h:column>
+      <f:facet name = "header">ADDRESS</f:facet>
+      #{u.address}
+   </h:column>
+</h:dataTable>     
+    </body>
+</html>

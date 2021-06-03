@@ -1,0 +1,47 @@
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+   xmlns:f = "http://java.sun.com/jsf/core"
+  >
+    <head>
+        <title>SHOP KEEPER</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+              <h:outputStylesheet library = "css" name = "styles.css"  /> 	
+
+    </head>
+    <body>
+        <h:dataTable value = "#{shopkeeperdb.usersList()}" var = "shopkeeper"
+   styleClass = "guestbookTable"
+   headerClass = "guestbookTableHeader"
+   rowClasses = "guestbookTableOddRow,guestbookTableEvenRow">
+   
+   <h:column>    				
+      <f:facet name = "header">Name</f:facet>    				
+      #{shopkeeper.name}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">Email</f:facet>
+      #{shopkeeper.email}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">MESSAGE</f:facet>
+      #{shopkeeper.message}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">DATE</f:facet>
+      #{shopkeeper.date}
+   </h:column>
+           
+</h:dataTable>
+    </body>
+</html>

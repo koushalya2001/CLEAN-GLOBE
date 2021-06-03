@@ -1,0 +1,86 @@
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+   xmlns:f = "http://java.sun.com/jsf/core"
+  >
+    <head>
+        <title>SHOP KEEPER</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            .guestbookTable {   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.guestbookTableHeader {
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.guestbookTableOddRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFFF;	
+}
+
+.guestbookTableEvenRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}
+
+        </style>	
+
+    </head>
+    <body style="background-color:green;">
+        <h:dataTable value = "#{calculateappointment.usersList()}" var = "shopkeeper"
+   styleClass = "guestbookTable"
+   headerClass = "guestbookTableHeader"
+   rowClasses = "guestbookTableOddRow,guestbookTableEvenRow" border="1">
+   
+   <h:column>    				
+      <f:facet name = "header">USER NAME</f:facet>    				
+      #{shopkeeper.username}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">SHOPKEEPER NAME</f:facet>
+      #{shopkeeper.shopname}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">PAPER</f:facet>
+      #{shopkeeper.param1}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">IRON</f:facet>
+      #{shopkeeper.irony}
+   </h:column>
+              <h:column>
+      <f:facet name = "header">CARDBOARD</f:facet>
+      #{shopkeeper.cby}
+   </h:column>
+           <h:column>
+      <f:facet name = "header">TIN</f:facet>
+      #{shopkeeper.tiny}
+   </h:column> 
+              <h:column>
+      <f:facet name = "header">DATE</f:facet>
+      #{shopkeeper.date}
+   </h:column>
+              <h:column>
+      <f:facet name = "header">TOTAL AMOUNT</f:facet>
+      #{shopkeeper.totalresult}
+   </h:column>
+</h:dataTable>
+    </body>
+</html>
+

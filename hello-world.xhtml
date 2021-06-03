@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+   xmlns:f = "http://java.sun.com/jsf/core"
+  >
+  <h:head>
+  <title>WELCOME TO GUESTBOOK APP</title>
+  </h:head>
+  <h:body>
+  <h:form>
+<h:outputLabel for="date">DATE</h:outputLabel> 
+  <br/>
+  <h:inputText id="date" value="#{guestbook.date}" label = "Date" >
+            <f:convertDateTime pattern="yyyy-MM-dd"/>
+
+  </h:inputText>
+ <br/>  
+      
+<h:outputLabel for="name">ENTER Name</h:outputLabel> 
+      <br/>
+  <h:inputText id="name" value="#{guestbook.name}"/>
+  <br/>
+      
+  <h:outputLabel for="email">ENTER EMAIL</h:outputLabel> 
+  <br/>
+  <h:inputText id="email" value="#{guestbook.email}">
+     
+      </h:inputText>
+   <br/>
+   
+       <h:outputLabel for="message">ENTER MESSAGE</h:outputLabel> 
+  <br/>
+  <h:inputTextarea id="message" value="#{guestbook.message}">
+      </h:inputTextarea>
+   <br/>
+   
+  <h:commandButton value="submit" action="#{guestbook.storeGuestBook}"></h:commandButton>
+  </h:form>
+      <br/>
+       <h:message for = "date" style = "color:red" />
+      
+      <h:outputText value = "2012-01-12" >
+      <f:convertDateTime pattern="yyyy-MM-dd"/>
+      </h:outputText>
+       <br/>
+       
+       <h:message for = "email" style = "color:red" />
+       <h:outputText value="abc@domain.com">
+        <h:message for = "email" style = "color:red" />   
+       </h:outputText>
+  </h:body>
+  </html>

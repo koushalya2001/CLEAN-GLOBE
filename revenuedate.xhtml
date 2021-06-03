@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+   xmlns:f = "http://java.sun.com/jsf/core"
+  >
+    <body style="background-color:powderblue;">
+
+ <h:form>
+        <h:outputLabel for="name2">ENTER Name</h:outputLabel> 
+         <h:inputText id="name2" value="#{calculateappointment.shopname}"/>
+         <h:outputLabel for="param2" value="FIND REVENUE GENERATED BETWEEN 2 DATES:"/>
+          <h:inputText id="date1" value="#{calculateappointment.date1}"/>AND
+          <h:inputText id="cby" value="#{calculateappointment.date2}"/>
+          <br/>
+          
+          <h:commandButton action="#{calculateappointment.revdates}" value="calculate" class="button5"/><br/>
+          <h:outputLabel for="paper1" value="Revenue OBTAINED FROM paper:"/>
+          <h:outputText id="paper1" value="#{calculateappointment.paper1}"/><br/>
+          <h:outputLabel for="tin1" value="Revenue OBTAINED FROM tin:"/>
+          <h:outputText id="tin1" value="#{calculateappointment.tin1}"/><br/>
+         <h:outputLabel for="cb1" value="Revenue OBTAINED FROM cardboard:"/>
+          <h:outputText id="cb1" value="#{calculateappointment.cardboard1}"/><br/>
+         <h:outputLabel for="i1" value="Revenue OBTAINED FROM iron:"/>
+          <h:outputText id="i1" value="#{calculateappointment.iron1}"/><br/>
+          <h:outputLabel for="total1" value="Total Revenue OBTAINED during above time"/>
+          <h:outputText id="total1" value="#{calculateappointment.revenue1}"/><br/>       
+          <br/>
+ </h:form>
+    </body>
+    </html>
